@@ -1,15 +1,17 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Login from "./Login"; 
+import Login from "./Login";
+import QueryAndResponse from "./QueryAndResponse";
 
 const router = createBrowserRouter([
     {
         path: '/',
-        element: <Login />
+        element: <Login />,
+        errorElement: <div>Page not found</div>,
     },
     {
-       
+        path: '/query',
+        element: <QueryAndResponse />,
     },
-   
 ]);
 
 const MainApp = () => {

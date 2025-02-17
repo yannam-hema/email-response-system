@@ -1,11 +1,7 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { googleLogout, useGoogleLogin } from '@react-oauth/google';
 import axios from 'axios';
-
-// Create the context
 const UserContext = createContext();
-
-// Create a provider component
 export const UserProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [profile, setProfile] = useState(null);
